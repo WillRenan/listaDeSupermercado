@@ -6,13 +6,13 @@
 }
 /*#f2e8cf  #386641 #6a994e #bc4749*/
 body {
-  background-color: #1e221f;
+  background-color: #282a36;
 }
 
 .header {
-  text-align: left;
+  text-align: center;
   background-color: #a7c957;
-  color: white;
+  color: #1e221f;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -33,25 +33,40 @@ main h2 {
   padding-top: 20px;
 }
 
-.lista-cadastro input[type="text"] {
+.lista-cadastro input[type="text"],
+input[type="number"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 6em;
-  background-color: #1e221f;
+  background-color: #282a36;
+  color: white;
   outline: none;
+  border: 0;
   border-bottom: 1px solid #ccc;
   transition: 0.3s;
 }
 /* input:hover {
   border-color: #a7c957;
 } */
-input[type="text"]:focus::placeholder {
+input[type="text"],
+input[type="number"]:focus::placeholder {
   color: transparent;
 }
 input[type="text"]:focus {
-  border-bottom: 3px solid #a7c957;
+  border-bottom: 1px solid #a7c957;
   background-color: #f2e8cf;
-  border-radius: 5px;
+  color: #282a36;
+}
+input[type="number"]:focus {
+  border-bottom: 1px solid #a7c957;
+  background-color: #f2e8cf;
+  color: #282a36;
+}
+input[type="text"]:hover {
+  border-bottom: 1px solid #a7c957;
+}
+input[type="number"]:hover {
+  border-bottom: 1px solid #a7c957;
 }
 
 .lista-cadastro input[type="submit"] {
@@ -60,14 +75,6 @@ input[type="text"]:focus {
   color: #a7c957;
   border: 2px solid #a7c957;
   transition: 0.5s;
-  cursor: pointer;
-  font-weight: bold;
-}
-.lista-cadastro input[type="submit"]:hover {
-  padding: 10px;
-  background-color: #a7c957;
-  color: #1e221f;
-  border: 2px solid #a7c957;
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
@@ -104,14 +111,9 @@ h3.price-produto {
   text-align: right;
   color: #1e221f;
   font-size: 18px;
-  transition: 0.3s;
-  cursor: pointer;
+  transition: 0.2s;
 }
-h3.price-produto:hover {
-  text-align: right;
-  color: #1e221f;
-  font-size: 17px;
-}
+
 h3.price-produto > span {
   background-color: #a7c957;
   padding: 5px;
@@ -126,5 +128,18 @@ h3.price-produto > span {
   width: 100%;
   height: 100px;
   background-color: #101110;
-  margin-top: 50px;
+  margin-top: 76px;
+  margin-bottom: 0;
+}
+
+.lista-cadastro button {
+  padding: 10px;
+  background-color: #a7c957;
+  color: #101110;
+  border: 2px solid #a7c957;
+  transition: 0.5s;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 510px;
+  border-radius: 5px;
 }
